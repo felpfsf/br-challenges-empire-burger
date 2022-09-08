@@ -1,0 +1,23 @@
+/* Header font */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+/* body font */
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Lato:wght@100;300;400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-purple-900;
+  }
+}
+
+@layer components {
+  .title__main {
+    @apply text-7xl font-heading text-amber-900
+  }
+  .paragraph{
+    @apply font-sans text-base leading-5
+  }
+}
