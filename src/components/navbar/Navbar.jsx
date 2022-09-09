@@ -11,66 +11,70 @@ const Navbar = () => {
   const handleNavButton = () => { setMenu(!menu) }
 
   return (
-    <header className="fixed w-full h-16 px-6 bg-burgerPalette-brown/5 flex items-center justify-between sm:justify-around">
-      <img src="/assets/logo.png" alt="" className=""/>
-      <nav className="hidden sm:flex items-center">
-        <ul className="text-lg flex">
-          <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Home</a>
-          </li>
-          <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Promoção</a>
-          </li>
-          <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Cardápio</a>
-          </li>
-          <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Comentários</a>
-          </li>
-          <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Contato</a>
-          </li>
-        </ul>
-        {/* Social Links */}
-        <div className="m-4 flex items-center gap-3">
+    <header className="header__section">
+      <div className="section__content flex items-center lg:justify-between">
+
+        <img src="/assets/logo.png" alt="" className="ml-6 lg:ml-[0px]" />
+        <nav className="hidden mr-6 xl:flex items-center">
+          <ul className="text-lg flex gap-4">
+            <li className="">
+              <a onClick={() => setMenu(false)} href='#' className="menu__text">Home</a>
+            </li>
+            <li className="">
+              <a onClick={() => setMenu(false)} href='#' className="menu__text">Promoção</a>
+            </li>
+            <li className="">
+              <a onClick={() => setMenu(false)} href='#' className="menu__text">Cardápio</a>
+            </li>
+            <li className="">
+              <a onClick={() => setMenu(false)} href='#' className="menu__text">Comentários</a>
+            </li>
+            <li className="">
+              <a onClick={() => setMenu(false)} href='#' className="menu__text">Contato</a>
+            </li>
+          </ul>
+          {/* Social Links */}
+        </nav>
+        <div className="hidden pr-20 xl:flex items-center gap-3">
           <a href="#"><img src={iconIFood} alt="" className="w-8" /></a>
           <a href="#"><img src={iconInstagram} alt="" className="w-8" /></a>
           <div className="w-[1px] h-10 bg-[#B50B04]"></div>
-          <a href="#" className="w-32 h-8 font-bold text-burgerPalette-title_black_87 bg-burgerPalette-yellow rounded flex items-center justify-center gap-2"><span><img src={iconWhatsapp} alt="" className="w-5" /></span>Contato</a>
+          <a href="#" className="contact__button"><span><img src={iconWhatsapp} alt="" className="w-5" /></span>Contato</a>
         </div>
-      </nav>
+      </div>
+
       {/* Mobile Menu */}
       {menu ?
-        <div className="z-10 sm:hidden w-[30px] h-[30px] bg-burgerPalette-title_black_38/10 flex items-center justify-center">
-          <AiOutlineClose onClick={handleNavButton} className="w-6 h-6 cursor-pointer" />
+        <div className="hamb__menu__box">
+          <AiOutlineClose onClick={handleNavButton} className="mob__menu__icon" />
         </div>
         :
-        <div className="z-10 sm:hidden w-[30px] h-[30px] bg-burgerPalette-title_black_38/10 flex items-center justify-center">
-          <AiOutlineMenu onClick={handleNavButton} className="w-6 h-6 cursor-pointer" />
+        <div className="hamb__menu__box">
+          <AiOutlineMenu onClick={handleNavButton} className="mob__menu__icon" />
         </div>
       }
       <nav className={
         menu ?
-          ('fixed top-0 right-0 h-screen w-[75%] pl-8 pt-28 bg-burgerPalette-title_black_38/10 backdrop-blur-lg ease-in-out duration-200 flex flex-col')
+          ('menu__mobile__on')
           :
-          ('fixed top-0 right-[-100%] h-screen w-[75%] pl-8 pt-28 bg-burgerPalette-title_black_38/10 backdrop-blur-lg ease-in-out duration-200 flex flex-col')
+          ('menu__mobile__off')
       }
       >
         <ul className="text-lg">
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Home</a>
+            <a onClick={() => setMenu(false)} href='#' className="menu__text">Home</a>
           </li>
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Promoção</a>
+            <a onClick={() => setMenu(false)} href='#' className="menu__text">Promoção</a>
           </li>
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Cardápio</a>
+            <a onClick={() => setMenu(false)} href='#' className="menu__text">Cardápio</a>
           </li>
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Comentários</a>
+            <a onClick={() => setMenu(false)} href='#' className="menu__text">Comentários</a>
           </li>
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="hover:text-burgerPalette-title_black_87 hover:font-bold">Contato</a>
+            <a onClick={() => setMenu(false)} href='#' className="menu__text">Contato</a>
           </li>
         </ul>
         {/* Social Links */}
@@ -78,7 +82,10 @@ const Navbar = () => {
           <a href="#"><img src={iconIFood} alt="" className="w-12" /></a>
           <a href="#"><img src={iconInstagram} alt="" className="w-12" /></a>
           <div className="w-[90%] h-[1px] bg-black"></div>
-          <a href="#" className="w-32 h-8 font-bold text-burgerPalette-title_black_87 bg-burgerPalette-yellow rounded flex items-center justify-center gap-2"><span><img src={iconWhatsapp} alt="" className="w-5" /></span>Contato</a>
+          <a href="#" className="contact__button ">
+            <img src={iconWhatsapp} alt="" className="w-5" />
+            <span>Contato</span>
+          </a>
         </div>
       </nav>
     </header >
