@@ -9,13 +9,13 @@
 
 @layer base {
   body {
-    @apply bg-purple-900;
+    @apply font-sans bg-purple-900;
   }
 }
 
 @layer components {
   .title__main {
-    @apply text-7xl font-heading text-amber-900
+    @apply text-7xl font-heading text-burgerPalette-red
   }
   .paragraph{
     @apply font-sans text-base leading-5
