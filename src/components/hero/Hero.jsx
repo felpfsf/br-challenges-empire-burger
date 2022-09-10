@@ -1,4 +1,4 @@
-import ServicesCards from '../ui/cards/ServicesCards'
+import ServicesCards from '../ui/cards/servicesCards/ServicesCards'
 
 import iconBurger from '/assets/icons/burger.svg'
 import iconHeadset from '/assets/icons/headset.svg'
