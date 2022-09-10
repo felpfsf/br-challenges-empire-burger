@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontSize: {
         main__title: 'clamp(3.8175rem, 3.3753rem + 1.9654vw, 4.8125rem)',
-        main__sub__title: 'clamp(0.875rem, 0.6528rem + 0.9877vw, 1.375rem)',
+        main__sub__title: 'clamp(0.875rem, 0.6528rem + 0.9877vw, 1.375rem)'
       },
       fontFamily: {
         heading: ['Lilita One', 'cursive'],
@@ -21,6 +21,9 @@ module.exports = {
           beige: '#FAE2CB',
           brown: '#3B200B'
         }
+      },
+      dropShadow: {
+        cardsShadow: '0px 4px 40px rgba(179, 155, 132, 0.5)'
       }
     }
   },
