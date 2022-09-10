@@ -1,4 +1,5 @@
-import React from 'react'
+import ServicesCards from '../ui/cards/ServicesCards'
+
 import iconBurger from '/assets/icons/burger.svg'
 import iconHeadset from '/assets/icons/headset.svg'
 import iconDelivery from '/assets/icons/delivery.svg'
@@ -14,43 +15,14 @@ const Hero = () => {
       </div>
       {/* Cards */}
       <div className='cards'>
+        {/* Card */}
+        <ServicesCards icon={iconBurger} title={'Artesanal'} info={'Nossas receitas são feitas com todo cuidado'} />
 
         {/* Card */}
-        <div className='card'>
-          <div className='card__img'>
-            <img src={iconBurger} alt="" className='' />
-          </div>
-          <div className='card__content'>
-            <h1 className='card__title'>Artesanal</h1>
-            <p className='card__text'>Nossas receitas são feitas com todo cuidado</p>
-          </div>
-        </div>
+        <ServicesCards icon={iconHeadset} title={'Atendimento'} info={'Totalmente personalizado'} />
 
         {/* Card */}
-        <div className='card'>
-          <div className='card__img'>
-            <img src={iconHeadset} alt="" className='' />
-          </div>
-          <div className='card__content'>
-            <h1 className='card__title'>Atendimento</h1>
-            <p className='card__text'>
-              Totalmente personalizado
-            </p>
-          </div>
-        </div>
-
-        {/* Card */}
-        <div className='card border-none'>
-          <div className='card__img'>
-            <img src={iconDelivery} alt="" className='' />
-          </div>
-          <div className='card__content'>
-            <h1 className='card__title'>Delivery Speed</h1>
-            <p className='card__text'>
-              Entregamos menos de 30 minutos
-            </p>
-          </div>
-        </div>
+        <ServicesCards icon={iconDelivery} title={'Delivery Speed'} info={'Entregames em menos de 45 minutos'} />
 
       </div>
     </section>
