@@ -60,7 +60,7 @@ const Navbar = () => {
           ('menu__mobile__off')
       }
       >
-        <ul className="text-lg">
+        <ul className="text-lg text-white">
           <li className="m-4">
             <a onClick={() => setMenu(false)} href='#' className="menu__text">Home</a>
           </li>
