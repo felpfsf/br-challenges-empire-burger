@@ -2,7 +2,7 @@
 const ServicesCards = ({ icon, title, info }) => {
   return (
     <>
-      <div className='card border-none'>
+      <div className='card'>
         <div className='card__img'>
           <img src={icon} alt="" className='' />
         </div>

@@ -79,7 +79,7 @@
   }
 
   .main__card__oferta__title {
-    @apply text-2xl font-heading text-white uppercase;
+    @apply text-card__oferta__title font-heading text-white uppercase;
   }
 
   .main__card__oferta__sub {
@@ -87,7 +87,7 @@
   }
 
   .main__card__oferta__day {
-    @apply text-white/70 text-lg [&>*]:font-heading [&>*]:uppercase [&>*]:text-[42px] [&>*]:text-white;
+    @apply text-white/70 text-card__oferta__day leading-7 [&>*]:font-heading [&>*]:uppercase [&>*]:text-card__oferta__day__span [&>*]:text-white;
   }
 
   .sub__card__oferta_title {
