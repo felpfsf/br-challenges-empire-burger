@@ -7,8 +7,10 @@ module.exports = {
         main__title: 'clamp(3.8175rem, 3.3753rem + 1.9654vw, 4.8125rem)',
         main__sub__title: 'clamp(0.875rem, 0.6528rem + 0.9877vw, 1.375rem)',
         card__oferta__title: 'clamp(1.25rem, 1.1000rem + 0.6667vw, 1.5rem)',
-        card__oferta__day: ' clamp(0.625rem, 0.3250rem + 1.3333vw, 1.125rem)',
-        card__oferta__day__span: ' clamp(1.25rem, 0.4250rem + 3.6667vw, 2.625rem)',
+        card__oferta__day: 'clamp(0.625rem, 0.3250rem + 1.3333vw, 1.125rem)',
+        card__oferta__day__span: 'clamp(1.25rem, 0.4250rem + 3.6667vw, 2.625rem)',
+        card__horario__semana: 'clamp(0.875rem, 0.4485rem + 1.8957vw, 1.125rem)',
+
       },
       fontFamily: {
         heading: ['Lilita One', 'cursive'],

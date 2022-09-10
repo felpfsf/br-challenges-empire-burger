@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply w-screen font-sans bg-white;
+    @apply w-screen font-sans bg-white overflow-x-hidden;
   }
 }
 
@@ -87,7 +87,7 @@
   }
 
   .main__card__oferta__day {
-    @apply text-white/70 text-card__oferta__day leading-7 [&>*]:font-heading [&>*]:uppercase [&>*]:text-card__oferta__day__span [&>*]:text-white;
+    @apply text-white/70 text-card__oferta__day leading-4 lg:leading-7 [&>*]:font-heading [&>*]:uppercase [&>*]:text-card__oferta__day__span [&>*]:text-white;
   }
 
   .sub__card__oferta_title {
