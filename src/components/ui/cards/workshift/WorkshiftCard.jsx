@@ -8,9 +8,9 @@ const WorkshiftCard = ({ turn }) => {
       {/* Cartao de horário */}
       <div className={
         turn ?
-          'max-w-[571px] w-full h-[110px] lg:h-[130px] py-5 px-3 rounded-[10px] bg-green-600 flex items-center gap-2'
+          'max-w-[571px] w-full py-2 lg:py-5 px-1 lg:px-3 rounded-[10px] bg-green-600 flex items-center gap-2'
           :
-          'max-w-[571px] w-full h-[110px] lg:h-[130px] py-5 px-3 rounded-[10px] bg-burgerPalette-red flex items-center gap-2'
+          'max-w-[571px] w-full py-2 lg:py-5 px-1 lg:px-3 rounded-[10px] bg-burgerPalette-red flex items-center gap-2'
       }>
         <div className='card__img w-[73px] h-[73px] lg:w-[93px] lg:h-[93px] p-4 bg-burgerPalette-title_black_38/20'>
           {/* relogio */}
