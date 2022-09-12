@@ -24,7 +24,7 @@ const Navbar = () => {
               <a onClick={() => setMenu(false)} href='#' className="menu__text">Promoção</a>
             </li>
             <li className="">
-              <a onClick={() => setMenu(false)} href='#' className="menu__text">Cardápio</a>
+              <a onClick={() => setMenu(false)} href='#cardapio' className="menu__text">Cardápio</a>
             </li>
             <li className="">
               <a onClick={() => setMenu(false)} href='#' className="menu__text">Comentários</a>
@@ -68,7 +68,7 @@ const Navbar = () => {
             <a onClick={() => setMenu(false)} href='#' className="menu__text">Promoção</a>
           </li>
           <li className="m-4">
-            <a onClick={() => setMenu(false)} href='#' className="menu__text">Cardápio</a>
+            <a onClick={() => setMenu(false)} href='#cardapio' className="menu__text">Cardápio</a>
           </li>
           <li className="m-4">
             <a onClick={() => setMenu(false)} href='#' className="menu__text">Comentários</a>
