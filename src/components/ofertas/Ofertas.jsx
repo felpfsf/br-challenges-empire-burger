@@ -6,7 +6,7 @@ import iconRelogio from '/assets/icons/timer.svg'
 const Ofertas = () => {
   const isOpen = false
   return (
-    <section className='section__content p-6 xl:p-0'>
+    <section className='section__content p-4 xl:p-0'>
       <div className='mt-16'>
         <h1 className='section__ofertas__title'>Ofertas Especiais</h1>
         <p className='section__ofertas__sub'>Aproveite todas as nossas ofertas, fiquem de olhos abertos, porque sempre estamos mudando o nosso cardapio.</p>
