@@ -97,6 +97,26 @@
   .sub__card__oferta_sub {
     @apply -mt-1 text-lg text-white text-burgerPalette-title_black_38/70;
   }
+
+  .card__workshift__open {
+    @apply max-w-[571px] w-full py-2 lg:py-5 px-[5px] lg:px-3 rounded-[10px] bg-green-600 flex items-center gap-2;
+  }
+
+  .card__workshift__closed {
+    @apply max-w-[571px] w-full py-2 lg:py-5 px-[5px] lg:px-3 rounded-[10px] bg-burgerPalette-red flex items-center gap-2;
+  }
+
+  .card__workshift__timmer {
+    @apply card__img w-[73px] h-[73px] lg:w-[93px] lg:h-[93px] p-4 bg-burgerPalette-title_black_38/20;
+  }
+
+  .card__workshift__tittle {
+    @apply text-[15px] lg:text-2xl font-heading text-burgerPalette-title_black_38/70 uppercase;
+  }
+
+  .card__workshift__dayshift {
+    @apply text-card__horario__semana lg:font-bold lg:[&>*]:font-black text-white/[0.85];
+  }
 }
 
 @layer utilities {
