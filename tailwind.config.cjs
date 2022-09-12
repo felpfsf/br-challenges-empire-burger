@@ -9,7 +9,7 @@ module.exports = {
         card__oferta__title: 'clamp(1.25rem, 1.1000rem + 0.6667vw, 1.5rem)',
         card__oferta__day: 'clamp(0.625rem, 0.3250rem + 1.3333vw, 1.125rem)',
         card__oferta__day__span: 'clamp(1.25rem, 0.4250rem + 3.6667vw, 2.625rem)',
-        card__horario__semana: 'clamp(0.875rem, 0.4485rem + 1.8957vw, 1.125rem)',
+        card__horario__semana: 'clamp(0.75rem, 0.5250rem + 1.0000vw, 1.125rem)',
 
       },
       fontFamily: {
