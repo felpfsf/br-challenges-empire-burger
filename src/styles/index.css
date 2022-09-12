@@ -8,8 +8,9 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply w-screen font-sans bg-white overflow-x-hidden;
+  body,
+  html {
+    @apply w-screen font-sans bg-white overflow-x-hidden scroll-smooth;
   }
 }
 
@@ -116,6 +117,46 @@
 
   .card__workshift__dayshift {
     @apply text-card__horario__semana lg:font-bold lg:[&>*]:font-black text-white/[0.85];
+  }
+
+  .cardapio__cta__container {
+    @apply w-full lg:h-[575px] m-auto px-6 py-10 bg-[url("/assets/banner-menu-mobile.png")] lg:bg-[url("/assets/banner-menu.png")] bg-no-repeat lg:bg-cover;
+  }
+
+  .cardapio__cta__content {
+    @apply w-[90%] lg:w-[55%] lg:mt-[100px] lg:ml-[40%];
+  }
+
+  .cardapio__cta__title {
+    @apply main__title text-2xl lg:text-[41px] leading-snug lg:leading-relaxed [&>*]:text-burgerPalette-brown [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md;
+  }
+
+  .cardapio__cta__subtitle {
+    @apply mt-2 text-sm;
+  }
+
+  .cardapio__cta__button {
+    @apply mt-2 contact__button w-52 h-11 text-white bg-burgerPalette-red;
+  }
+
+  .cardapio__menu {
+    @apply w-full px-6 bg-burgerPalette-brown;
+  }
+
+  .cardapio__menu__title {
+    @apply lg:hidden text-2xl font-heading text-burgerPalette-yellow uppercase mt-[54px];
+  }
+
+  .cardapio__plate {
+    @apply lg:w-[60%] my-6 lg:my-10;
+  }
+
+  .cardapio__plate__name {
+    @apply text-xl font-heading text-burgerPalette-beige/90 uppercase flex justify-between;
+  }
+
+  .cardapio__plate__ingrd {
+    @apply text-sm text-white;
   }
 }
 

@@ -1,22 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useEffect } from 'react'
+
+import { client } from '../../data/api'
 
 const Cardapio = () => {
+  const [plate, setPlate] = useState([])
+
+  useEffect(() => {
+    client.get('menu').then(response => {
+      setPlate(response.data)
+    })
+  }, [])
+
+  const formatPrice = (price) => {
+    const fmtdPrice = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(price)
+    return fmtdPrice
+  }
+
   return (
-    <section className='w-screen bg-burgerPalette-beige'>
-      <div className="section__content flex flex-col">
+    <section id='cardapio' className='w-screen bg-burgerPalette-beige'>
+      <div className="w-full flex flex-col lg:flex-row">
         {/* Call */}
-        <div className='w-full m-auto px-6 py-10 bg-[url("/assets/banner-menu-mobile.png")] lg:bg-[url("/assets/banner-menu.png")] bg-no-repeat' >
+        <div className='cardapio__cta__container' >
           {/* <img src="/assets/banner-menu-mobile.png" alt="" /> */}
-          <div className=''>
-            <h1 className='main__title text-2xl [&>*]:text-burgerPalette-brown [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md'>Escolha o seu combo imperial, <span>peça agora!</span></h1>
-            <p className='mt-2 text-sm'>Temos vários tipos de pratos para a nossa realeza, fique esperto porque temos sempre  promoção!</p>
-            <a className='mt-2 contact__button w-52 h-11 text-white bg-burgerPalette-red' href="#">Ver Cardápio Completo</a>
+          <div className='cardapio__cta__content'>
+            <h1 className='cardapio__cta__title'>Escolha o seu combo imperial, <span>peça agora!</span></h1>
+            <p className='cardapio__cta__subtitle'>Temos vários tipos de pratos para a nossa realeza, fique esperto porque temos sempre  promoção!</p>
+            <a className='cardapio__cta__button' href="#">Ver Cardápio Completo</a>
           </div>
         </div>
         {/* Cardapio */}
-        <div className='h-[465px] bg-burgerPalette-brown'>
+        <div className='cardapio__menu'>
+          <h2 className='cardapio__menu__title'>Nossa especialidade</h2>
+          <h2 className='hidden lg:block cardapio__menu__title'>Cardápio imperial | Burger</h2>
           {/* API */}
-          API do menu aqui
+          {plate.map((item) => (
+            <div key={JSON.stringify(item)} className='cardapio__plate '>
+              <h3 className='cardapio__plate__name'>{item.plate}
+                <span>
+                  {formatPrice(item.price)}
+                </span>
+              </h3>
+              <p className='cardapio__plate__ingrd'>{item.ingredients}</p>
+            </div>
+          ))}
+
         </div>
       </div>
     </section>
