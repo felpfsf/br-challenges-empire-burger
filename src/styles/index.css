@@ -10,7 +10,7 @@
 @layer base {
   body,
   html {
-    @apply w-screen font-sans bg-white overflow-x-hidden scroll-smooth;
+    @apply w-screen font-sans bg-[#FAF3F2] overflow-x-hidden scroll-smooth;
   }
 }
 
@@ -124,15 +124,15 @@
   }
 
   .cardapio__cta__content {
-    @apply w-[90%] lg:w-[55%] lg:mt-[100px] lg:ml-[40%];
+    @apply w-[90%] lg:w-[55%] lg:mt-[130px] lg:ml-[40%];
   }
 
   .cardapio__cta__title {
-    @apply main__title text-2xl lg:text-[41px] leading-snug lg:leading-relaxed [&>*]:text-burgerPalette-brown [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md;
+    @apply main__title text-2xl lg:text-[41px] leading-snug [&>*]:text-burgerPalette-brown [&>*]:bg-burgerPalette-yellow [&>*]:p-2 [&>*]:rounded-md;
   }
 
   .cardapio__cta__subtitle {
-    @apply mt-2 text-sm;
+    @apply mt-2 text-sm lg:text-base;
   }
 
   .cardapio__cta__button {
