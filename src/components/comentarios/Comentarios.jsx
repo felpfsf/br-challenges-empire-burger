@@ -10,7 +10,7 @@ const Comentarios = () => {
     client.get('testimonials').then(response => {
       setDepoimento(response.data)
     })
-  }, [client])
+  }, [])
 
   return (
     <section id="comentarios" className='section__content px-6 lg:px-0 mb-6'>
